@@ -46,11 +46,10 @@ public class Solution {
                         }
                         for( Point val : toadd ){
                             if( !tovisit.contains(val) && !region.contains(val) )  
-                                tovisit.push(val) ;
-                        }
-                        for( Point v : toadd ){
-                            region.add(v);
-                            mat[v.x][v.y]=2; // mark as visited
+                                tovisit.push(val);
+                
+                            region.add(val);
+                            mat[val.x][val.y]=2; // mark as visited
                         }
                     }
                     maxi = Math.max(maxi,region.size());
